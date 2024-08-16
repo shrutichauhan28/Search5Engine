@@ -57,7 +57,7 @@ from langchain_community.tools import ArxivQueryRun, WikipediaQueryRun, DuckDuck
 from langchain.agents import initialize_agent, AgentType
 from langchain.callbacks import StreamlitCallbackHandler
 import os
-import speech_recognition as sr
+# import speech_recognition as sr
 from dotenv import load_dotenv
 
 # Custom CSS to style the app
@@ -125,23 +125,23 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-# Initialize the voice recognizer
-recognizer = sr.Recognizer()
+# # Initialize the voice recognizer
+# recognizer = sr.Recognizer()
 
-def recognize_speech():
-    with sr.Microphone() as source:
-        st.write("Listening...")
-        audio = recognizer.listen(source)
-        try:
-            st.write("Recognizing...")
-            query = recognizer.recognize_google(audio)
-            st.write(f"Recognized: {query}")
-            return query
-        except sr.UnknownValueError:
-            st.write("Sorry, I did not understand the audio.")
-        except sr.RequestError:
-            st.write("Sorry, my speech service is down.")
-    return None
+# def recognize_speech():
+#     with sr.Microphone() as source:
+#         st.write("Listening...")
+#         audio = recognizer.listen(source)
+#         try:
+#             st.write("Recognizing...")
+#             query = recognizer.recognize_google(audio)
+#             st.write(f"Recognized: {query}")
+#             return query
+#         except sr.UnknownValueError:
+#             st.write("Sorry, I did not understand the audio.")
+#         except sr.RequestError:
+#             st.write("Sorry, my speech service is down.")
+#     return None
 
 
 
