@@ -31,4 +31,5 @@ unstructured
 pytube
 numexpr
 huggingface_hub
-speech_recognition pyaudio
+speech_recognition 
+pyaudio
